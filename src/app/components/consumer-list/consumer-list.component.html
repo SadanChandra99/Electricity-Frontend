@@ -1,0 +1,36 @@
+<div class="customer-list">
+    <h2>Consumer List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>firstName</th>
+            <th> lastName</th>
+            <th> mobile</th>
+            <th>address</th>
+            <th> email</th>
+            <th>Action</th>
+            <!-- <th>username</th>
+            <th>password</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let consumer of consumers">
+            <td>{{consumer.firstName}}</td>
+            <td>{{consumer.lastName}}</td>
+            <td>{{consumer.mobile}}</td>
+            <td>{{consumer.address}}</td>
+            <td>{{consumer.email}}</td>
+            <td>
+                <button (click) = "updateconsumer(consumer.id)" class="btn btn-info">update</button>
+                <button (click) = "deleteconsumer(consumer.id)" class="btn btn-danger" style="margin-left: 10px">delete</button>
+            </td>
+            <!-- <td>{{consumer.userName}}</td>
+            <td>{{consumer.password}}</td> -->
+
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>
+    <button style="margin-left: 20px;"   class= "btn btn-danger"  (click)="home()"> back</button>
+</div>

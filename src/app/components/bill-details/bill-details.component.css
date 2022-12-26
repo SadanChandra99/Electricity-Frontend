@@ -1,0 +1,28 @@
+
+.hover{
+    /* background-color: #4992e5; */
+
+      cursor: pointer;
+      /* margin: 55px 50px 50px 50px; */
+      margin: 59px 53px 185px 67px;
+    }
+    
+    .container {
+      padding-top: 30px;
+    }
+    
+    .pointable {
+      cursor: pointer;
+    }
+  
+    .sub-content{
+      margin-left: 50px;
+      margin-bottom: 5px;
+    }
+  
+    .btn{
+      margin-left: 50px;
+      
+    }
+    
+  

@@ -1,0 +1,52 @@
+<div class="payment-container">
+    <h1 class ="text-center"><em>Payment-lists</em> </h1>
+<br>
+<div class = "row">
+<table class="table table-striped table-bordered-shadow">
+    <thead class="table-dark">
+        <tr>
+            <!-- <th>paymentId</th> -->
+            <th>AccountNumber</th>
+            <th>CardHolderName</th>
+            <th>Amount</th>
+            <th>CardNumber</th>
+            <th>Cvv</th>
+            <th>PaymentDate</th>
+            <!-- <th>latePaymentCharges</th>
+            <th>totalPaid</th> -->
+            <th>Status</th>
+            <th>BillId</th>
+                <th class="text-center">TO DO</th>
+              
+        </tr>
+    </thead>
+     <tbody>
+        <tr *ngFor="let payment of payments">
+            <!-- <td>{{payment.paymentId}}</td> -->
+            <td>{{payment.accountNumber}}</td>
+            <td>{{payment.cardHolderName}}</td>
+            <td>{{payment.amount}}</td>
+            <td>{{payment.cardNumber}}</td>
+            <td>{{payment.cvv}}</td>
+            <td>{{payment.paymentDate}}</td>
+            <!-- <td>{{payment.latePaymentCharges}}</td>
+            <td>{{payment.totalPaid}}</td> -->
+            <td>{{payment.status}}</td>
+            <td>{{payment.billId}}</td>
+            <td>
+                <button  (click) = "updatePayment(payment.paymentId)" class = "btn btn-success"> Update</button>
+                <button  (click) = "deletePayment(payment.paymentId)"class = "btn btn-danger" style ="margin-left:10px"> Remove</button>
+                <button  (click) = "paymentDetails(payment.paymentId)"class = "btn btn-secondary" style ="margin-left:10px">View</button>
+
+            </td>
+        </tr>
+
+     </tbody>
+
+    
+</table>
+</div>
+</div>
+<div>
+    <button style="margin-left: 20px;"   class= "btn btn-danger"  (click)="home()"> back</button>
+  </div>

@@ -1,0 +1,51 @@
+<div class="col-md-6 offset-md-3">
+
+    <div class="container">
+        <div class="row">       
+        <div class = "card col-md-8 offset-md-3 shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="bg-primary p-2 text-dark bg-opacity-25">
+             <h2 class="text-center fst-italic"> ADD Payment Details</h2>
+              <div class = "card-body">
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label> Account Number</label>
+        <input type="text" class ="form-control" id = "accountNumber"
+            [(ngModel)] = "payment.accountNumber" name = "accountNumber">
+    </div>
+
+    <div class="form-group">
+        <label> CardHolder Name</label>
+        <input type="text" class ="form-control" id = "cardHolderName"
+            [(ngModel)] = "payment.cardHolderName" name = "cardHolderName">
+    </div>
+    <div class="form-group">
+        <label> Amount</label>
+        <input type="text" class ="form-control" id = "amount"
+            [(ngModel)] = "payment.amount" name = "amount">
+    </div>
+    <div class="form-group">
+        <label> Card Number</label>
+        <input type="text" class ="form-control" id = "cardNumber"
+            [(ngModel)] = "payment.cardNumber" name = "cardNumber">
+    </div>
+    <div class="form-group">
+        <label>CVV</label>
+        <input type="text" class ="form-control" id = "cvv"
+            [(ngModel)] = "payment.cvv" name = "cvv">
+    </div>
+    <div class="form-group">
+        <label>Payment Date</label>
+        <input type="text" class ="form-control" id = "paymentDate"
+            [(ngModel)] = "payment.paymentDate" name = "paymentDate">
+    </div>
+    <br>
+    <button class = "btn btn-success" type ="submit">Submit</button>
+    
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

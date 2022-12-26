@@ -1,0 +1,106 @@
+
+<div class="card-body">
+
+
+
+
+  <div class="col-md-6 offset-md-3">
+   
+    <div class="container">
+        <div class="row">       
+        <div class = "card col-md-8 offset-md-3 shadow-lg p-3 mb-5 bg-body rounded" style="margin-top: 75px; margin-left: 10px;">
+        <div class="bg-primary p-2 text-dark bg-opacity-25">
+             <h2 class="text-center fst-italic"> Customer Login</h2>
+              <div class = "card-body">
+
+
+                <form [formGroup]="loginform" (ngSubmit)="onsubmit()" class="index-form" >
+                  <h3></h3>
+                  <div class="form-group"> 
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input formControlName="email" [ngClass]="{'is-invalid': submitted && loginform.controls.email.errors}"  class="text-danger"
+                    type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+                    placeholder="Enter email">
+                    <div *ngIf="submitted && loginform.controls.email.errors" class="text-danger">
+                      please enter valid email id
+                    </div>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input formControlName="password" [ngClass]="{'is-invalid': submitted && loginform.controls.password.errors}" class="text-danger"
+                    type="password" class="form-control" id="exampleInputPassword1" 
+                    placeholder="Password" >
+                    <div *ngIf="submitted && loginform.controls.password.errors" class="text-danger">
+                      please enter correct password
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div  >
+                  <button  id="index-button" type="submit" class="btn btn-primary">Submit</button>
+                  <button routerLink="/carousal" id="index-cancel-button" type="submit" class="btn btn-danger" style="margin-left: 60px;">cancel</button>
+                </form>
+
+    
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+  
+ 
+
+  <div >
+    <button (click)="adminbutton()" id="admin-button" type="button" class="btn btn-primary" style="margin-left: 350px; margin-top:-35px">Log in as Admin</button>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<!-- 
+
+   <form [formGroup]="loginform" (ngSubmit)="onsubmit()" class="index-form" >
+    <h3>Customer Login</h3>
+    <div class="form-group"> 
+      <label for="exampleInputEmail1">Email address</label>
+      <input formControlName="email" [ngClass]="{'is-invalid': submitted && loginform.controls.email.errors}"  class="text-danger"
+      type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+      placeholder="Enter email">
+      <div *ngIf="submitted && loginform.controls.email.errors" class="text-danger">
+        please enter valid email id
+      </div>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input formControlName="password" [ngClass]="{'is-invalid': submitted && loginform.controls.password.errors}" class="text-danger"
+      type="password" class="form-control" id="exampleInputPassword1" 
+      placeholder="Password" >
+      <div *ngIf="submitted && loginform.controls.password.errors" class="text-danger">
+        please enter correct password
+      </div>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div  >
+    <button  id="index-button" type="submit" class="btn btn-primary">Submit</button>
+    <button routerLink="/carousal" id="index-cancel-button" type="submit" class="btn btn-danger">cancel</button>
+  </form>
+ -->

@@ -1,0 +1,28 @@
+<div class="hoverwell">
+    <h1>Bills Lists</h1>
+<hr>
+
+     <div  class="search-box">Filter By Date
+        <input type="text"  placeholder="Search.." name="search">
+     <button type="submit" class="btn btn-success ">Search</button> 
+     </div> 
+     
+<app-bill-thumbnail *ngFor="let bill of billslist" [bill]="bill" ></app-bill-thumbnail>
+
+<!-- 
+<div class="hover" *ngFor="let bill of bills">
+   <h2> Bill Date:    {{bill.billDate}}</h2>
+   <div class="sub-content"> Bill ID: {{bill.billId}}</div>
+   <div class="sub-content"> customer ID: {{bill.customerId}}</div>
+   <div class="sub-content"> Customer Name: {{bill.customerName}}</div>
+   <div class="sub-content"> Email ID: {{bill.emailId}}</div>
+   <div class="sub-content"> Mobile Number: {{bill.mobileNumber}}</div>
+   <div class="sub-content"> Units Consumed: {{bill.unitsConsumed}}</div>
+   <div>
+    <h3>Bill Status:  {{bill.billStatus}}</h3>
+   </div>
+
+</div> -->
+
+
+</div>

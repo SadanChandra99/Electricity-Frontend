@@ -1,0 +1,87 @@
+
+<form [formGroup]="paymentForm" (ngSubmit)="onSubmit($event)" class="form-table">
+  
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Account Number</label>
+    <div class="col-sm-10">
+      <input formControlName="accountNumber" [ngClass]="{'is-invalid':submitted && paymentForm.controls.accountNumber.errors}"
+      [(ngModel)]="payment.accountNumber" name="accountNumber" type="text" class="form-control" id="colFormLabel" placeholder="Enter Account Number">
+      <div *ngIf="submitted && paymentForm.controls.accountNumber.errors" class="text-danger">
+        <div *ngIf="submitted && paymentForm.controls.accountNumber.errors.required" class="text-danger">
+          Please enter Account Number 
+        </div >
+        <div *ngIf="submitted && paymentForm.controls.accountNumber.errors.minlength" class="text-danger">
+          Account Number must be exactlt 12 digits
+        </div>
+        <div *ngIf="submitted && paymentForm.controls.accountNumber.errors.maxlength" class="text-danger">
+          Account Number must be exactlt 12 digits
+        </div>
+
+      </div>
+      <small  class="text-muted">
+        Must be 12 digits long.
+      </small>
+    </div>
+  </div>
+
+  
+
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Card Number</label>
+    <div class="col-sm-10">
+      <input formControlName="cardNumber" [ngClass]="{'is-invalid':submitted && paymentForm.controls.cardNumber.errors}"
+       [(ngModel)]="payment.cardNumber" name="cardNumber" type="text" class="form-control" id="colFormLabel" placeholder="Enter Card Number">
+       <div *ngIf="submitted && paymentForm.controls.cardNumber.errors" class="text-danger">
+        <div *ngIf="submitted && paymentForm.controls.cardNumber.errors.required" class="text-danger">
+          Please enter Card Number 
+        </div>
+        <div *ngIf="submitted && paymentForm.controls.cardNumber.errors.minlength" class="text-danger">
+          Card Number must be exactly 12 digits
+        </div>
+        <div *ngIf="submitted && paymentForm.controls.cardNumber.errors.maxlength" class="text-danger">
+          Card Number must be exactly 12 digits
+        </div>
+       </div>
+      
+       <small  class="text-muted">
+        Must be 12 characters long.
+      </small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">CVV</label>
+    <div class="col-sm-10">
+      <input formControlName="cvv" [ngClass]="{'is-invalid':submitted && paymentForm.controls.cvv.errors}"
+       [(ngModel)]="payment.cvv" name="cvv" type="text" class="form-control" id="colFormLabel" placeholder="Enter CVV">
+      <div *ngIf="submitted && paymentForm.controls.cvv.errors" class="text-danger">
+        <div *ngIf="submitted && paymentForm.controls.cvv.errors.required" class="text-danger">
+          PLease enter CVV
+        </div>
+        <div *ngIf="submitted && paymentForm.controls.cvv.errors.minlength">
+          CVV must be exactly 3 digits
+        </div>
+        <div *ngIf="submitted && paymentForm.controls.cvv.errors.maxlength">
+          CVV must be exactly 3 digits
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Amount</label>
+    <div class="col-sm-10">
+      <input formControlName="amount" [ngClass]="{'is-invalid':submitted && paymentForm.controls.amount.errors}"
+        name="amount" type="text" class="form-control" id="colFormLabel" placeholder="Enter Amount">
+      <div *ngIf="submitted && paymentForm.controls.amount.errors" class="text-danger">
+          Amount cannot be Empty
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button  type="submit" class="btn btn-info ">Pay</button>
+    <button routerLink="/bills" type="button" class="btn btn-danger">Cancel</button>
+</div>
+  
+</form>

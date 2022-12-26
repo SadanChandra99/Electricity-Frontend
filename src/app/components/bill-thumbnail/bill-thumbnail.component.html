@@ -1,0 +1,14 @@
+
+
+<div [routerLink]="['/bills', bill.billId]" class="hover" >
+    
+    <h2> Bill Date:    {{bill.billDate}}</h2>
+    <div class="sub-content"> Bill ID: {{bill.billId}}</div>
+   
+    <div class="sub-content"> Units Consumed: {{bill.unitsConsumed}}</div>
+    <div>
+     <h3>Due Date:  {{bill.billdueDate}}</h3>
+    </div>
+ 
+    <!-- <button *ngIf="bill.billStatus =='Not paid'" class="btn btn-danger" (click)="handlepay()" >pay</button> -->
+ </div>

@@ -1,0 +1,40 @@
+<h3 class = "fst-italic"> Bill Details</h3>
+
+    
+    <div class= "card col-md-6 offset-md-3 shadow-lg p-3 mb-5 bg-body rounded">
+    <div class="bg-warning p-2 text-dark bg-opacity-25">
+
+
+<div>
+    <label><b> Bill ID:</b></label>{{  bill.billId}}
+</div>
+<div>
+    <label><b> Bill Date:</b></label>{{  bill.billDate}}
+    
+</div>
+<div>
+    <label><b> Bill Due Date:</b></label> {{  bill.billdueDate}}
+    
+</div>
+<div>
+    <label><b> Units Consumed:</b></label> {{  bill.unitsConsumed}}
+   
+</div>
+<div>
+    <label><b> Bill Amount:</b></label> {{  bill.billAmount}}
+   
+</div>
+<div>
+    <label><b> Status:</b></label> {{  bill.status}}
+    
+</div>
+
+</div>
+</div>
+
+
+    <div>
+        <button style="margin-left: 20px;"   class= "btn btn-danger"  (click)="home()"> back</button>
+      </div>
+
+

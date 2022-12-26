@@ -1,0 +1,52 @@
+<div class="col-md-6 offset-md-3">
+   
+    <div class="container">
+        <div class="row">       
+        <div class = "card col-md-8 offset-md-3 shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="bg-primary p-2 text-dark bg-opacity-25">
+             <h2 class="text-center fst-italic"> Update Details</h2>
+              <div class = "card-body">
+
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> BillDate </label>
+            <input type="text" class ="form-control" id = "billDate"
+                [(ngModel)] = "bill.billDate" name = "billDate">
+        </div>
+        
+        <div class="form-group">
+            <label> Bill Due Date  </label>
+            <input type="text" class ="form-control" id = "billdueDate"
+                [(ngModel)] = "bill.billdueDate" name = "billdueDate">
+        </div>
+        <div class="form-group">
+            <label> Bill Units COnsumed  </label>
+            <input type="text" class ="form-control" id = "unitsConsumed"
+                [(ngModel)] = "bill.unitsConsumed" name = "unitsConsumed">
+        </div>
+        <div class="form-group">
+            <label> Bill Amount </label>
+            <input type="text" class ="form-control" id = "billAmount"
+                [(ngModel)] = "bill.billAmount" name = "billAmount">
+        </div>
+        <div class="form-group">
+            <label>Status </label>
+            <input type="text" class ="form-control" id = "status"
+                [(ngModel)] = "bill.status" name = "status">
+        </div>
+        <button style="  margin-left: 25px;  margin-top: 18px;" class = "btn btn-success" type ="submit">Submit</button>
+        <div>
+            <button style="    margin-left: 190px;
+            margin-top: -66px;"   class= "btn btn-danger"  (click)="goToBillList()"> Cancel</button>
+          </div>
+
+    </form>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>

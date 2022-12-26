@@ -1,0 +1,28 @@
+.hoverwell{
+  margin: 5px 5px 150px 5px;
+}
+.search-box{
+  padding-left: 20px;
+
+}
+
+
+  .hover{
+    background-color: #b4bfce;
+    cursor: pointer;
+    margin: 5px 50px 2px 20px;
+  }
+  
+  .container {
+    padding-top: 10px;
+  }
+  
+  .pointable {
+    cursor: pointer;
+  }
+
+  .sub-content{
+    margin-left: 20px;
+    margin-bottom: 3px;
+  }
+  
